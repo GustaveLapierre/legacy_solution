@@ -1,0 +1,26 @@
+# Python venv
+bin/
+include/
+lib/
+!frontend/src/lib/
+pyvenv.cfg
+*__pycache__
+
+# JS Frontend (Vite + React + TS)
+frontend/node_modules
+
+# ENV
+.env
+
+
+# VSCode
+.vscode/
+
+
+# Miscellaneous
+*.DS_Store
+.ruff_cache/
+misc/
+data/
+restore.py
+playground.py
