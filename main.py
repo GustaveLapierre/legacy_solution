@@ -34,7 +34,7 @@ app = Flask(__name__)
 # Register blueprints
 app.register_blueprint(api, url_prefix="/api")
 
-app.static_folder = "./frontend/dist"
+app.static_folder = "./frontend/src"
 app.static_url_path = ""
 app.config["SQLALCHEMY_DATABASE_URI"] = DB_URI
 app.config["SECRET_KEY"] = SECRET
