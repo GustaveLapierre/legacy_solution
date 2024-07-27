@@ -15,7 +15,7 @@ SECRET = os.getenv("SECRET_KEY")
 POSTGRES_USER = os.getenv("POSTGRES_USER")
 POSTGRES_PASSWORD = os.getenv("POSTGRES_PASSWORD")
 POSTGRES_DB = os.getenv("POSTGRES_DB")
-
+POSTGRES_HOST = os.getenv("POSTGRES_HOST")
 
 if not all([HOST, PORT, DEBUG]):
     raise ValueError("HOST, PORT or DEBUG must be set")
@@ -26,7 +26,7 @@ if not SECRET:
 if not all([POSTGRES_USER, POSTGRES_PASSWORD, POSTGRES_DB]):
     raise ValueError("POSTGRES_USER, POSTGRES_PASSWORD or POSTGRES_DB must be set")
 
-DB_URI = f"postgresql://{POSTGRES_USER}:{POSTGRES_PASSWORD}@{HOST}:5432/{POSTGRES_DB}"
+DB_URI = f"postgresql://{POSTGRES_USER}:{POSTGRES_PASSWORD}@{POSTGRES_HOST}:5432/{POSTGRES_DB}"
 
 # Init and config
 app = Flask(__name__)
