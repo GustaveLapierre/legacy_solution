@@ -8,6 +8,7 @@ from src.api import api
 # load .env file
 load_dotenv()
 
+# Load environment variables
 HOST = os.getenv("HOST")
 PORT = os.getenv("PORT")
 DEBUG = os.getenv("DEBUG")
@@ -16,15 +17,18 @@ POSTGRES_USER = os.getenv("POSTGRES_USER")
 POSTGRES_PASSWORD = os.getenv("POSTGRES_PASSWORD")
 POSTGRES_DB = os.getenv("POSTGRES_DB")
 POSTGRES_HOST = os.getenv("POSTGRES_HOST")
+OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 
+
+# Ensure all required environment variables are set
 if not all([HOST, PORT, DEBUG]):
     raise ValueError("HOST, PORT or DEBUG must be set")
-
 if not SECRET:
     raise ValueError("SECRET must be set")
-
 if not all([POSTGRES_USER, POSTGRES_PASSWORD, POSTGRES_DB]):
     raise ValueError("POSTGRES_USER, POSTGRES_PASSWORD or POSTGRES_DB must be set")
+if not OPENAI_API_KEY:
+    raise ValueError("OPENAI_API_KEY must be set")
 
 DB_URI = f"postgresql://{POSTGRES_USER}:{POSTGRES_PASSWORD}@{POSTGRES_HOST}:5432/{POSTGRES_DB}"
 

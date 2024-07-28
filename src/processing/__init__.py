@@ -3,7 +3,10 @@ import re
 from openai import OpenAI
 from src.models import Entries, GeneralSummary, db
 from src.utils import concat_summaries
+from dotenv import load_dotenv
 
+# Load the .env file
+load_dotenv()
 
 SYSTEM_PROMPT = """
 You are a helpful assistant. You will be given some text in English or French.\

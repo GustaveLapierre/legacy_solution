@@ -24,3 +24,5 @@ misc/
 data/
 restore.py
 playground.py
+
+env/
