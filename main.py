@@ -59,6 +59,9 @@ with app.app_context():
 def load_user(user_id):
     return Users.query.filter_by(id=user_id).first() or None
 
+@app.route('/health', methods=['GET'])
+def health_check():
+    return "Healthy", 200
 
 @app.route("/", defaults={"path": ""})
 @app.route("/<path:path>")
