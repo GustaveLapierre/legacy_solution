@@ -75,12 +75,12 @@ export function FileUpload() {
           <p>Drop the files here ...</p>
         ) : (
           <>
-            <p>Drag 'n' drop some files here, or click to select files</p>
+            <p>Drag and drop your files here, or click to select</p>
             <p className="flex">
               <span className="mr-1 self-center">
                 <Info className="w-4 h-4" />
               </span>
-              <i className="text-sm text-slate-700">Only well formed CSV and XLSX files are allowed</i>
+              <i className="text-sm text-slate-700">Only correctly formatted files will be processed</i>
             </p>
           </>
         )}
@@ -99,7 +99,7 @@ export function FileUpload() {
         <h2 className="text-lg font-semibold my-2">Short description</h2>
         <textarea
           className="w-full border rounded-sm px-2 text-sm"
-          placeholder="please provide a short description maximum of 256 characters"
+          placeholder="Please provide a short description (Max 256 chars.)"
           rows={5}
           onChange={(e) => setDescription(e.target.value)}
         />

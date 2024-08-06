@@ -1,13 +1,13 @@
 services:
   postgres:
-    container_name: hippolyte_summaries
+    container_name: cz_sol_1
     image: postgres
     ports:
       - "5432:5432"
     environment:
       - POSTGRES_PASSWORD=postgres
       - POSTGRES_USER=postgres
-      - POSTGRES_DB=hippolyte_summaries
+      - POSTGRES_DB=cz_sol_1
     volumes:
         - postgres_data:/var/lib/postgresql/data
 

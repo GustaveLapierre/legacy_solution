@@ -44,7 +44,7 @@ export default function LoginDialog() {
                 <Label>Username</Label>
                 <Input
                   type="email"
-                  placeholder="valid email address"
+                  placeholder="Email address"
                   required
                   onChange={(e) => setLoginForm({ ...loginForm, username: e.target.value })}
                 />
@@ -53,7 +53,7 @@ export default function LoginDialog() {
                 <Label>Password</Label>
                 <Input
                   type="password"
-                  placeholder="your password"
+                  placeholder="Password"
                   required
                   onChange={(e) => setLoginForm({ ...loginForm, password: e.target.value })}
                 />
