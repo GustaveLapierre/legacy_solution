@@ -62,7 +62,7 @@ export default function MainLayout() {
           className="flex items-center gap-2 whitespace-nowrap p-6 text-xl font-medium focus:outline-none"
           to="/"
         >
-          <img src="/images/apple-touch-icon.png" alt="Logo" className="h-fit w-full" />
+          <img src="/images/apple-touch-icon.png" alt="Logo" className="h-24 w-auto" />
         </Link>
         <nav aria-label="side navigation" className="flex-1 divide-y divide-slate-100 overflow-auto">
           <div>
