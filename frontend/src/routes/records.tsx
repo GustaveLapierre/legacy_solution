@@ -11,7 +11,7 @@ export type Records = {
 };
 
 const formatDatetime = (datetime: string) => {
-  return new Date(datetime).toISOString().split("T")[0] + " at " + new Date(datetime).toUTCString().split(" ")[4];
+  return new Date(datetime).toISOString().split("T")[0] + " " ;
 };
 
 export default function Records() {
