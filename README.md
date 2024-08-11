@@ -1,4 +1,4 @@
-# Hippolyte Summaries
+# Job Description Summaries
 A simple web app that takes an formatted Excel file and uses  ChatGPT 4o to summarize extracted data from the file. Files can be previewed on the app or  downloaded.
 
 ## Technical Details
